@@ -1,0 +1,15 @@
+
+[Unit]
+Description=OBD-II-HUD
+
+[Service]
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/pi.Xauthority
+ExecStart=/usr/bin/python3 /home/pi/OBD-II/python/Display.py
+Restart=always
+RestartSec=10s
+KillMode=process
+TimeoutSec=infinity
+
+[Install]
+WantedBy=graphical.target

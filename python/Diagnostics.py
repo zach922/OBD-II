@@ -7,9 +7,9 @@ class Diagnostics:
     MAX_OILTEMP = 100.0
     MIN_OILTEMP = -20
 
-    def __init__(self, speed=0.0, tack=0.0, oilTemp=70.0, engineLight=False, gasLight=False):
+    def __init__(self, speed=0.0, RPM=0.0, oilTemp=70.0, engineLight=False, gasLight=False):
         self.speed = speed
-        self.tack = tack
+        self.RPM = RPM
         self.oilTemp = oilTemp
         self.engineLight = engineLight
         self.gasLight = gasLight
