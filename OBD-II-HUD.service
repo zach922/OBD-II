@@ -3,11 +3,12 @@
 Description=OBD-II-HUD
 
 [Service]
-Environment=DISPLAY=:0
-Environment=XAUTHORITY=/home/pi.Xauthority
-ExecStart=/usr/bin/python3 /home/pi/OBD-II/python/Display.py
-Restart=always
-RestartSec=10s
+Type=simple
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=/home/pi/.Xauthority"
+ExecStart=/usr/bin/python3 /home/pi/OBD-II/python/Display.py > /home/pi/OBD-II/OBDLOG.log 2>&1
+Restart=on-failure
+RestartSec=10
 KillMode=process
 TimeoutSec=infinity
 
